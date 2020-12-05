@@ -1,5 +1,6 @@
 import React from 'react';
-import {Text, View, ScrollView} from 'react-native';
+import {Text, View, ScrollView, TouchableOpacity} from 'react-native';
+import {  } from 'react-native-gesture-handler';
 import {useSelector, useDispatch } from 'react-redux';
 import {addrecipe, deleterecipe } from '../redux/HomeManagementApp';
 
@@ -26,6 +27,11 @@ const RecipeList = ({navigation}) =>{
 
                 
                 }
+                <TouchableOpacity
+                    onPress={() =>navigation.navigate("AddRecipes")}
+                >
+                    <Text>Add  +</Text>
+                </TouchableOpacity>
             </View>
 
     );

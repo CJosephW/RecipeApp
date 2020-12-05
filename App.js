@@ -35,6 +35,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import RecipeList from './src/pages/RecipeList';
+import AddRecipesPage from './src/pages/AddRecipesPage';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -61,6 +62,7 @@ const App: () => React$Node = () => {
           <Stack.Screen name = "All=>( )ne" component = {TabStack}>
 
           </Stack.Screen>
+          <Stack.Screen name = "AddRecipes" component = {AddRecipesPage}></Stack.Screen>
         </Stack.Navigator>
 
       </NavigationContainer>

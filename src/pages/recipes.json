@@ -1,0 +1,24 @@
+{
+	"recipes": [{
+            "id": 0,
+			"title": "Slappin' Burgers",
+			"description": "Just some slappin' burgers",
+			"ingredients": ["1/2lb Ground beef", "hamburger buns", "American Cheese", "Lettuce", "Tomato", "Mayonaise","common item 1"],
+			"steps": ["1. Form ground beef into patties", "2. Wash and prepare produce",
+				"3. Pour small drizzle of oil into nonstick pan and cook burgers on Medium-High heat for 5 minitues on each side",
+				"4. Drain remaining oil and place burgers onto toasted buns and top with veggies and condiments as desired!"
+			]
+		},
+		{
+            "id": 1,
+			"title": "Slappin' Pizza",
+			"description": "Just some slappin' pizza",
+			"ingredients": ["1/2lb Ground beef", "2 oz pepperonni", "mozzerella cheese", "Tomato", "Mayonaise", "common item 1"],
+			"steps": ["1. Form ground beef into patties", "2. Wash and prepare produce",
+				"3. Pour small drizzle of oil into nonstick pan and cook burgers on Medium-High heat for 5 minitues on each side",
+				"4. Drain remaining oil and place burgers onto toasted buns and top with veggies and condiments as desired!"
+			]
+		}
+
+	]
+}
