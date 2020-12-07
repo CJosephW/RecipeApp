@@ -1,6 +1,7 @@
 {
 	"recipes": [{
-            "id": 0,
+
+			"id": 0,
 			"title": "Slappin' Burgers",
 			"description": "Just some slappin' burgers",
 			"ingredients": ["1/2lb Ground beef", "hamburger buns", "American Cheese", "Lettuce", "Tomato", "Mayonaise","common item 1"],
@@ -10,7 +11,7 @@
 			]
 		},
 		{
-            "id": 1,
+			"id": 1,
 			"title": "Slappin' Pizza",
 			"description": "Just some slappin' pizza",
 			"ingredients": ["1/2lb Ground beef", "2 oz pepperonni", "mozzerella cheese", "Tomato", "Mayonaise", "common item 1"],

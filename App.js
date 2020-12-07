@@ -36,6 +36,7 @@ import {
 
 import RecipeList from './src/pages/RecipeList';
 import AddRecipesPage from './src/pages/AddRecipesPage';
+import ShoppingList from './src/pages/ShoppingList';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -49,6 +50,10 @@ function TabStack() {
         name = "Recipes"
         component={RecipeList}
       ></Tab.Screen>
+      <Tab.Screen
+        name = "Shopping List"
+        component = {ShoppingList}
+        ></Tab.Screen>
 
 
     </Tab.Navigator>

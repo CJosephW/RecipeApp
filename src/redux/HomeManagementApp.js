@@ -8,22 +8,19 @@ export const DELETE_RECIPE = 'DELETE_RECIPE';
 let recipeId = 0;
 
 export function addrecipe(recipe) {
+    console.log(recipe)
     return{
         type: ADD_RECIPE,
-        id: recipeId++,
+        id: recipe.item.id,
         recipe
     }
 }
-
 export function deleterecipe(id){
     return{
         type: DELETE_RECIPE,
         payload: id
     }
 }
-
-// reducer 
-
 const initialState = [];
 
 function recipeReducer(state = initialState, action) {
@@ -33,7 +30,7 @@ function recipeReducer(state = initialState, action) {
                 ...state,
                 {
                     id: action.id,
-                    note: action.note
+                    recipe: action.recipe
                 }
             ]
     

@@ -20,7 +20,7 @@
     "@react-navigation/stack": "^5.12.8",
     "lodash.remove": "^4.7.0",
     "react": "16.13.1",
-    "react-dom": "~16.9.0",
+    "react-dom": "~17.0.1",
     "react-native": "0.63.4",
     "react-native-fontawesome": "^7.0.0",
     "react-native-gesture-handler": "^1.9.0",
