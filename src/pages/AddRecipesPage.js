@@ -7,21 +7,15 @@ import { and } from 'react-native-reanimated';
 
 
 const AddRecipesPage = ({route, navigation: {goBack}}) =>{
-    
-    
-    
     const recipes = useSelector(state => state);
-
     const IDArray = recipes.map(item =>{
         return item.id
     })
-
     const saveRecipe = (item) => {
 
         route.params.addRecipe({item});
         goBack();
     }
-
     const [recipeList, setRecipeList] = useState([]);
 
     useEffect(() =>{

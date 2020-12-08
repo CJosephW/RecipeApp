@@ -8,7 +8,6 @@ export const DELETE_RECIPE = 'DELETE_RECIPE';
 let recipeId = 0;
 
 export function addrecipe(recipe) {
-    console.log(recipe)
     return{
         type: ADD_RECIPE,
         id: recipe.item.id,
