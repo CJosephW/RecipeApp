@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View, ScrollView, TouchableOpacity, Button} from 'react-native';
+import {Text, View, ScrollView, TouchableOpacity, Button, StyleSheet} from 'react-native';
 import {  } from 'react-native-gesture-handler';
 import database_recipes from '../../database/recipes.json';
 import {useSelector, useDispatch } from 'react-redux';
@@ -34,14 +34,32 @@ const AddRecipesPage = ({route, navigation: {goBack}}) =>{
             
             {recipeList.map(item =>{
                 if(IDArray.indexOf(item.id) === -1){
-                    return(<Text>{item.title}<Button title = 'add' onPress = {() => saveRecipe(item)}></Button></Text>);
+                    //return(<Text>{item.title}<Button title = 'add' onPress = {() => saveRecipe(item)}></Button></Text>);
+                    return(
+                    <View>
+                        <Text>{item.title}</Text>
+                        <TouchableOpacity style ={{backgroundColor:'#5e99f7', padding:10, textAlign:'center'}} onPress = {() => saveRecipe(item)}>
+                            <Text>Add!</Text>
+                        </TouchableOpacity>
+                    </View>)
                 }
                 
-                return(<Text>{item.title} Already Added</Text>)
+                return(<View><Text>{item.title}</Text><TouchableOpacity style ={{backgroundColor:'grey', padding: 10, textAlign:'center'}}><Text>Already Added</Text></TouchableOpacity></View>)
                 
             })}
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    mainView:{
+        textAlign:'center',
+        justifyContent:'center',
+        alignItems:'center',
+        position:'relative', 
+        alignSelf:'stretch',
+        flex:1
+    }
+})
 
 export default AddRecipesPage;

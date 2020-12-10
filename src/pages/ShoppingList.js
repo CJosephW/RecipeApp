@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View, ScrollView, TouchableOpacity} from 'react-native';
+import {Text, View, ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
 import {  } from 'react-native-gesture-handler';
 import {useSelector, useDispatch } from 'react-redux';
 
@@ -7,11 +7,12 @@ import {useSelector, useDispatch } from 'react-redux';
 
 const ShoppingList = ({navigation}) =>{
 
-    const recipes = useSelector(state => state);
     const [ingredients, setIngredients] = useState([]);
+    const recipes = useSelector(state => state);
+
 
     useEffect(() => {
-        
+
         const updatedIngredients = [];
 
         for(const recipe of recipes){
@@ -20,7 +21,7 @@ const ShoppingList = ({navigation}) =>{
                 const ingIndex = updatedIngredients.findIndex(ingredient => ingredient.name === ing);
 
                 if(ingIndex === -1){
-                    var newIng = {}
+                    const newIng = {}
                     newIng['name'] = ing;
                     newIng['amount'] = 1;
                     updatedIngredients.push(newIng);
@@ -31,16 +32,27 @@ const ShoppingList = ({navigation}) =>{
            })
         }    
         setIngredients(updatedIngredients);
-    }, [])
+    }, [recipes])
     
 
     return(
-        <View>
+        <View style = {styles.mainView}>
             {ingredients.map(ing =>(
                 <Text>{ing.name} {ing.amount}</Text>
             ))}
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    mainView:{
+        textAlign:'center',
+        justifyContent:'center',
+        alignItems:'center',
+        position:'relative', 
+        alignSelf:'stretch',
+        flex:1
+    }
+})
 
 export default ShoppingList;

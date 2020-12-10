@@ -34,6 +34,7 @@ function recipeReducer(state = initialState, action) {
             ]
     
         case DELETE_RECIPE:
+            console.log('deleting')
             const deletedNewArray = remove(state, obj => {
                 return obj.id != action.payload;
             })
